@@ -143,7 +143,7 @@ main .list .note:nth-of-type(5n+2) { order: 2 }
 main .list .note:nth-of-type(5n+3) { order: 3 }
 main .list .note:nth-of-type(5n+4) { order: 4 }
 main .list .note:nth-of-type(5n)   { order: 5 }
-main .list .note h2 {}
+/*main .list .note h2 {}*/
 main .list .note p {
     font-size: 14px;
 }

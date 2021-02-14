@@ -4,7 +4,6 @@ const path = require ('path');
 
 let port = process.env.PORT || 3000;
 
-const indexRouter = require ('./routers/indexRouter');
 const notesRouter = require ('./routers/notesRouter');
 
 // ejs
@@ -17,8 +16,7 @@ app.use(express.urlencoded({extended:true}))
 app.use(express.static(path.resolve(__dirname, '../public')))
 
 
-app.use ('/', indexRouter);
-app.use ('/notes',notesRouter);
+app.use ('/',notesRouter);
 
 
 app.listen (port, ()=> console.log("Servidor conectado en puerto " + port   ))
