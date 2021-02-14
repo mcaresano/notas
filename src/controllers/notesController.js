@@ -29,7 +29,8 @@ module.exports = {
         db.Note.update({
             titulo :req.body.titulo,
             texto : req.body.texto
-        }, {where: {id: req.params.id}})
+        }, {where: {id: req.params.id}}
+        )
         .then (()=> res.redirect('/'))  
     },
 

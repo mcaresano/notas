@@ -14,6 +14,11 @@ module.exports = (sequelize, dataTypes)=>{
         texto: {
             type: dataTypes.STRING(255),
             notNull: true,
+        },
+        deleted_at :{
+            type: dataTypes.STRING(1),
+            notNull: true,
+            default:0
         }
  
     }
@@ -21,9 +26,7 @@ module.exports = (sequelize, dataTypes)=>{
     let config = {
         tableName: 'notas',
         timestamps : true,
-        //paranoid : true,
-        underscored : true,
-       // deletedAt : "deleted_at"
+        underscored : true
     }
 
     const Note = sequelize.define(alias, cols, config)
