@@ -1,5 +1,11 @@
+const db = require('../database/models/index');
+
 module.exports = {
     home: (req, res)=> {
-        res.render ('index');
+       db.Note.findAll()
+        .then  ((notas)=>{
+           res.render ('index',{notas: notas})
+        })
+     
     }
-}
+}       

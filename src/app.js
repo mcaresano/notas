@@ -2,8 +2,10 @@ const express = require ('express');
 const app = express ();
 const path = require ('path');
 
-const indexRouter = require ('./routers/indexRouter');
+let port = process.env.PORT || 3000;
 
+const indexRouter = require ('./routers/indexRouter');
+const notesRouter = require ('./routers/notesRouter');
 
 // ejs
 app.set('view engine', 'ejs');
@@ -16,5 +18,7 @@ app.use(express.static(path.resolve(__dirname, '../public')))
 
 
 app.use ('/', indexRouter);
+app.use ('/notes',notesRouter);
 
-app.listen (3000, ()=> {console.log("Servidor conectado en puerto 3000");})
+
+app.listen (port, ()=> console.log("Servidor conectado en puerto " + port   ))

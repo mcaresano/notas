@@ -28,9 +28,10 @@
             </form>
         </section>
         <section class="list">
+          <% for( let i = 0; i < notas.length; i++ ) { %>
             <div class="note">
-                <h2>Un título</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, placeat sapiente! Accusantium sit quod quos.</p>
+                <h2><%= notas[i].titulo  %> </h2>
+                <p> <%= notas[i].texto  %> </p>
                 <div class="edit">
                     <a href="#"><i class="far fa-edit"></i></a>
                     <form action="">
@@ -38,37 +39,8 @@
                     </form>
                 </div>
             </div>
-            <div class="note">
-                <h2>Un título</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, placeat sapiente! Accusantium sit quod quos.</p>
-                <div class="edit">
-                    <a href="#"><i class="far fa-edit"></i></a>
-                    <form action="">
-                        <button type="submit"><i class="far fa-trash-alt"></i></button>
-                    </form>
-                </div>
-            </div>
-            <div class="note">
-                <h2>Un título</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, placeat sapiente! Accusantium sit quod quos.</p>
-                <div class="edit">
-                    <a href="#"><i class="far fa-edit"></i></a>
-                    <form action="">
-                        <button type="submit"><i class="far fa-trash-alt"></i></button>
-                    </form>
-                </div>
-            </div>
-            <div class="note">
-                <h2>Un título</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, placeat sapiente! Accusantium sit quod quos.</p>
-                <div class="edit">
-                    <a href="#"><i class="far fa-edit"></i></a>
-                    <form action="">
-                        <button type="submit"><i class="far fa-trash-alt"></i></button>
-                    </form>
-                </div>
-            </div>
-            
+            <% } %> 
+                       
         </section>
     </main>
 
